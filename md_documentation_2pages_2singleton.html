@@ -24,12 +24,7 @@
       <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
         <div class="m-row">
           <ol class="m-col-t-6 m-col-m-none">
-            <li>
-              <a href="pages.html">Pages</a>
-              <ol>
-                <li><a href="about.html">About</a></li>
-              </ol>
-            </li>
+            <li><a href="pages.html">Pages</a></li>
             <li><a href="namespaces.html">Namespaces</a></li>
           </ol>
           <ol class="m-col-t-6 m-col-m-none" start="3">
@@ -51,7 +46,7 @@
         <h1>
           单例模式
         </h1>
-<p><a name="autotoc_md10"></a></p><ul><li>作者: ...</li><li>PR: <a href="https://github.com/wanghenshui/cppidioms-cn/pull/XXX">https:/<wbr />/<wbr />github.com/<wbr />wanghenshui/<wbr />cppidioms-cn/<wbr />pull/<wbr />XXX</a></li><li>Issue: <a href="https://github.com/wanghenshui/tidb/cppidioms-cn/XXX">https:/<wbr />/<wbr />github.com/<wbr />wanghenshui/<wbr />tidb/<wbr />cppidioms-cn/<wbr />XXX</a></li></ul><section id="autotoc_md11"><h2><a href="#autotoc_md11">背景介绍</a></h2><p>额没啥说的，就举个例子</p></section><section id="autotoc_md12"><h2><a href="#autotoc_md12">实现</a></h2><pre class="m-code"><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
+<p><a name="autotoc_md12"></a></p><ul><li>作者: ...</li><li>PR: <a href="https://github.com/wanghenshui/cppidioms-cn/pull/XXX">https:/<wbr />/<wbr />github.com/<wbr />wanghenshui/<wbr />cppidioms-cn/<wbr />pull/<wbr />XXX</a></li><li>Issue: <a href="https://github.com/wanghenshui/tidb/cppidioms-cn/XXX">https:/<wbr />/<wbr />github.com/<wbr />wanghenshui/<wbr />tidb/<wbr />cppidioms-cn/<wbr />XXX</a></li></ul><section id="autotoc_md13"><h2><a href="#autotoc_md13">背景介绍</a></h2><p>额没啥说的，就举个例子</p></section><section id="autotoc_md14"><h2><a href="#autotoc_md14">实现</a></h2><pre class="m-code"><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">T</span><span class="o">&gt;</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">Singleton</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="n">T</span><span class="w"> </span><span class="n">v</span><span class="p">;</span>
 <span class="w"> </span><span class="k">public</span><span class="o">:</span>
@@ -59,7 +54,7 @@
 <span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="n">Singleton</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ins</span><span class="p">;</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ins</span><span class="p">;</span><span class="w">  </span>
 <span class="w">  </span><span class="p">}</span>
-<span class="p">};</span></pre></section><section id="autotoc_md13"><h2><a href="#autotoc_md13">可能的缺陷</a></h2><p>符号冲突 &mdash; 引入tag</p></section><section id="autotoc_md14"><h2><a href="#autotoc_md14">改进方案/其他方案</a></h2><p>folly singleton介绍</p></section><section id="autotoc_md15"><h2><a href="#autotoc_md15">延伸/其他问题</a></h2><p>singleton实际上是个坏设计，singleton不能太多，否则到处都是singleton真的很刺眼</p><p>mongo里有getcontext模版就类似这个singleton，到处捞对象</p><section id="autotoc_md16"><h3><a href="#autotoc_md16">godbolt(等)</a></h3><p>无</p></section></section>
+<span class="p">};</span></pre></section><section id="autotoc_md15"><h2><a href="#autotoc_md15">可能的缺陷</a></h2><p>符号冲突 &mdash; 引入tag</p></section><section id="autotoc_md16"><h2><a href="#autotoc_md16">改进方案/其他方案</a></h2><p>folly singleton介绍</p></section><section id="autotoc_md17"><h2><a href="#autotoc_md17">延伸/其他问题</a></h2><p>singleton实际上是个坏设计，singleton不能太多，否则到处都是singleton真的很刺眼</p><p>mongo里有getcontext模版就类似这个singleton，到处捞对象</p><section id="autotoc_md18"><h3><a href="#autotoc_md18">godbolt(等)</a></h3><p>无</p></section></section>
       </div>
     </div>
   </div>
