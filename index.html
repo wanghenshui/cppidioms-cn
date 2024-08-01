@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>cppidioms</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
+  <link rel="stylesheet" href="m-dark+documentation.compiled.css" />
+  <link rel="icon" href="favicon-dark.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#22272e" />
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">cppidioms</a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
+        </svg></a>
+        <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
+        <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
+      </div>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li>
+              <a href="pages.html">Pages</a>
+              <ol>
+                <li><a href="about.html">About</a></li>
+              </ol>
+            </li>
+            <li><a href="namespaces.html">Namespaces</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="annotated.html">Classes</a></li>
+            <li><a href="files.html">Files</a></li>
+            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path" />
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          cppidioms
+        </h1>
+<p><a name="md__r_e_a_d_m_e"></a> <a href="https://github.com/wanghenshui/cppidioms-cn/actions"><img class="m-image" src="https://github.com/wanghenshui/cppidioms-cn/workflows/MacOS/badge.svg" alt="Image" /></a> <a href="https://github.com/wanghenshui/cppidioms-cn/actions"><img class="m-image" src="https://github.com/wanghenshui/cppidioms-cn/workflows/Windows/badge.svg" alt="Image" /></a> <a href="https://github.com/wanghenshui/cppidioms-cn/actions"><img class="m-image" src="https://github.com/wanghenshui/cppidioms-cn/workflows/Ubuntu/badge.svg" alt="Image" /></a> <a href="https://github.com/wanghenshui/cppidioms-cn/actions"><img class="m-image" src="https://github.com/wanghenshui/cppidioms-cn/workflows/Style/badge.svg" alt="Image" /></a> <a href="https://github.com/wanghenshui/cppidioms-cn/actions"><img class="m-image" src="/workflows/Install/badge.svg" alt="Image" /></a></p><section id="autotoc_md0"><h2><a href="#autotoc_md0">cppidioms-cn</a></h2><p>项目起源于群友们的建议，介绍一些惯用法</p><p>参与步骤</p><ol><li>documentation pages目录下添加文档，使用template模板</li><li>include/source目录下添加实现</li><li>test目录下添加测试</li></ol><p>这个项目使用ModernCppStarter，在此表示感谢</p><section id="autotoc_md1"><h3><a href="#autotoc_md1">Usage</a></h3><section id="autotoc_md2"><h4><a href="#autotoc_md2">Build and run test suite</a></h4><p>Use the following commands from the project&#x27;s root directory to run the test suite.</p><pre class="m-code">cmake<span class="w"> </span>-S<span class="w"> </span><span class="nb">test</span><span class="w"> </span>-B<span class="w"> </span>build/test
+cmake<span class="w"> </span>--build<span class="w"> </span>build/test
+<span class="nv">CTEST_OUTPUT_ON_FAILURE</span><span class="o">=</span><span class="m">1</span><span class="w"> </span>cmake<span class="w"> </span>--build<span class="w"> </span>build/test<span class="w"> </span>--target<span class="w"> </span><span class="nb">test</span>
+
+<span class="c1"># or simply call the executable: </span>
+./build/test/cppidiomsTests</pre><p>To collect code coverage information, run CMake with the <code>-DENABLE_TEST_COVERAGE=1</code> option.</p></section><section id="autotoc_md3"><h4><a href="#autotoc_md3">Run clang-format</a></h4><p>Use the following commands from the project&#x27;s root directory to check and fix C++ and CMake source style. This requires <em>clang-format</em>, <em>cmake-format</em> and <em>pyyaml</em> to be installed on the current system.</p><pre class="m-code">cmake<span class="w"> </span>-S<span class="w"> </span><span class="nb">test</span><span class="w"> </span>-B<span class="w"> </span>build/test
+
+<span class="c1"># view changes</span>
+cmake<span class="w"> </span>--build<span class="w"> </span>build/test<span class="w"> </span>--target<span class="w"> </span>format
+
+<span class="c1"># apply changes</span>
+cmake<span class="w"> </span>--build<span class="w"> </span>build/test<span class="w"> </span>--target<span class="w"> </span>fix-format</pre><p>See <a href="https://github.com/TheLartians/Format.cmake">Format.cmake</a> for details. These dependencies can be easily installed using pip.</p><pre class="m-code">pip<span class="w"> </span>install<span class="w"> </span>clang-format<span class="o">==</span><span class="m">14</span>.0.6<span class="w"> </span><span class="nv">cmake_format</span><span class="o">==</span><span class="m">0</span>.6.11<span class="w"> </span>pyyaml</pre></section><section id="autotoc_md4"><h4><a href="#autotoc_md4">Build the documentation</a></h4><pre class="m-code">cmake<span class="w"> </span>-S<span class="w"> </span>documentation<span class="w"> </span>-B<span class="w"> </span>build/doc
+cmake<span class="w"> </span>--build<span class="w"> </span>build/doc<span class="w"> </span>--target<span class="w"> </span>GenerateDocs
+<span class="c1"># view the docs</span>
+open<span class="w"> </span>build/doc/doxygen/html/index.html</pre><p>To build the documentation locally, you will need Doxygen, jinja2 and Pygments installed on your system.</p></section><section id="autotoc_md5"><h4><a href="#autotoc_md5">Build everything at once</a></h4><p>The project also includes an <code>all</code> directory that allows building all targets at the same time. This is useful during development, as it exposes all subprojects to your IDE and avoids redundant builds of the library.</p><pre class="m-code">cmake<span class="w"> </span>-S<span class="w"> </span>all<span class="w"> </span>-B<span class="w"> </span>build
+cmake<span class="w"> </span>--build<span class="w"> </span>build
+
+<span class="c1"># run tests</span>
+./build/test/cppidiomsTests
+<span class="c1"># format code</span>
+cmake<span class="w"> </span>--build<span class="w"> </span>build<span class="w"> </span>--target<span class="w"> </span>fix-format
+<span class="c1"># build docs</span>
+cmake<span class="w"> </span>--build<span class="w"> </span>build<span class="w"> </span>--target<span class="w"> </span>GenerateDocs</pre></section><section id="autotoc_md6"><h4><a href="#autotoc_md6">Additional tools</a></h4><p>The test subprojects include the <a href="cmake/tools.cmake">tools.cmake</a> file which is used to import additional tools on-demand through CMake configuration arguments. The following are currently supported.</p><section id="autotoc_md7"><h5><a href="#autotoc_md7">Sanitizers</a></h5><p>Sanitizers can be enabled by configuring CMake with &lsquo;-DUSE_SANITIZER=&lt;Address | Memory | MemoryWithOrigins | Undefined | Thread | Leak | &#x27;Address;Undefined&rsquo;&gt;`.</p></section><section id="autotoc_md8"><h5><a href="#autotoc_md8">Static Analyzers</a></h5><p>Static Analyzers can be enabled by setting <code>-DUSE_STATIC_ANALYZER=&lt;clang-tidy | iwyu | cppcheck&gt;</code>, or a combination of those in quotation marks, separated by semicolons. By default, analyzers will automatically find configuration files such as <code>.clang-format</code>. Additional arguments can be passed to the analyzers by setting the <code>CLANG_TIDY_ARGS</code>, <code>IWYU_ARGS</code> or <code>CPPCHECK_ARGS</code> variables.</p></section><section id="autotoc_md9"><h5><a href="#autotoc_md9">Ccache</a></h5><p>Ccache can be enabled by configuring with <code>-DUSE_CCACHE=&lt;ON | OFF&gt;</code>.</p></section></section></section></section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">&hellip;</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div id="search-help" class="m-text m-dim m-text-center">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
+            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="search-v2.js"></script>
+<script src="searchdata-v2.js" async="async"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p>cppidioms. Created with <a href="https://doxygen.org/">Doxygen</a> 1.11.0 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+      </div>
+    </div>
+  </div>
+</nav></footer>
+</body>
+</html>
