@@ -2,19 +2,28 @@
 [![Actions Status](https://github.com/wanghenshui/cppidioms-cn/workflows/Windows/badge.svg)](https://github.com/wanghenshui/cppidioms-cn/actions)
 [![Actions Status](https://github.com/wanghenshui/cppidioms-cn/workflows/Ubuntu/badge.svg)](https://github.com/wanghenshui/cppidioms-cn/actions)
 [![Actions Status](https://github.com/wanghenshui/cppidioms-cn/workflows/Style/badge.svg)](https://github.com/wanghenshui/cppidioms-cn/actions)
-[![Actions Status](/workflows/Install/badge.svg)](https://github.com/wanghenshui/cppidioms-cn/actions)
 
 # cppidioms-cn
 
 项目起源于群友们的建议，介绍一些惯用法
 
+请点击page标签页查看
+
+
 参与步骤
+
+0. 安装format工具
+
+```bash
+pip install clang-format==14.0.6 cmake_format==0.6.11 pyyaml
+···
 
 1. documentation pages目录下添加文档，使用template模板
 2. include/source目录下添加实现
 3. test目录下添加测试
+4. 运行build.sh
 
-这个项目使用ModernCppStarter，在此表示感谢
+这个项目使用ModernCppStarter，在此表示感谢，以下是详细用法
 
 ## Usage
 
